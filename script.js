@@ -7,6 +7,7 @@ const searchCEP = fetch('https://viacep.com.br/ws/01001250/json/')
 			console.log(r);
 		}
 	})
-	.catch((erro) => console.log(erro));
+	.catch((erro) => console.log(erro))
+	.finally((mensagem) => console.log('Finalmente terminou!'));
 
 console.log(searchCEP);
