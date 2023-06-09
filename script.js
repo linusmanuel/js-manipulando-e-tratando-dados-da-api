@@ -12,7 +12,7 @@ async function searchAddress(cep) {
 	}
 }
 
-const ceps = ['01001000', '01001001'];
-let listOfCEPS = ceps.map((values) => searchAddress(values));
-console.log(listOfCEPS);
-Promise.all(listOfCEPS).then((res) => console.log(res));
+const cep = document.querySelector('#cep');
+cep.addEventListener('focusout', (event) => {
+	searchAddress(cep.value);
+});
